@@ -52,7 +52,7 @@ try{
                 $result2 = $query3->fetchAll();
                     foreach ($result2 as $coluna)
                     {
-                        echo($coluna["COLUMN_NAME"] ." <b>FOREIGN KEY : </b> <i>". $coluna["CONSTRAINT_NAME"].")</i> \n <br/>");
+                        echo($coluna["COLUMN_NAME"] ." <b>KEYS : </b> <i>". $coluna["CONSTRAINT_NAME"].")</i> \n <br/>");
                     }
                  ?></td>
             </tr>
