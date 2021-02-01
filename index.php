@@ -41,6 +41,7 @@ try{
                 <?php
                 $query2 = $Conexao->query('exec sp_columns '."'". $tabela['TABLE_NAME']."'");
                 $result = $query2->fetchAll();
+                $numtables = count($tabelas);
                     foreach ($result as $coluna)
                     {
                         echo($coluna["COLUMN_NAME"] ." <b>tipo:</b> <i>". $coluna["TYPE_NAME"]."(".$coluna["PRECISION"].")</i> \n <br/>");
@@ -63,3 +64,7 @@ try{
     </form>
 </body>
 </html>
+<?php
+echo "Número de tabelas : " . $numtables . "<br/>";
+
+?>
